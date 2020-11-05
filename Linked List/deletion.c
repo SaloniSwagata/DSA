@@ -22,6 +22,22 @@ struct Node* DeleteFirstNode(struct Node* head)
     return head;
 }
 
+struct Node* DeleteAtIndex(struct Node* head, int index)
+{
+    struct Node *p=head;
+    struct Node *q = head->next;
+    int i;
+    for(i=0;i<index-1;i++)
+    {
+        p = p->next;
+        q = q->next;
+    }
+    
+    p->next = q->next;
+    free(q);
+    return head;
+}
+
 int main()
 {
     struct Node * head;
@@ -70,5 +86,8 @@ int main()
     printf("Linked List After Deletion from front: \n");
     LinkedListTraversal(head);
     
+    head = DeleteAtIndex(head,2);
+    printf("Linked List After Deletion at given index: \n");
+    LinkedListTraversal(head);
     return 0;
 }
