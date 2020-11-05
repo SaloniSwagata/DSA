@@ -12,6 +12,14 @@ void LinkedListTraversal(struct Node *ptr)
         ptr = ptr->next;
     }
 }
+
+struct Node * InsertAtFront(struct Node *head, int data)
+{
+    struct Node *ptr = (struct Node*)malloc (sizeof(struct Node));
+    ptr->data = data;
+    ptr->next = head;
+    return ptr;
+}
 int main()
 {
     struct Node * head;
@@ -35,6 +43,10 @@ int main()
     third->data = 13;
     third->next = NULL;
 
+    printf("Original Linked List: \n");
+    LinkedListTraversal(head);
+    head = InsertAtFront(head, 56);
+    printf("Linked List after insertion at front: \n");
     LinkedListTraversal(head);
     return 0;
 }
