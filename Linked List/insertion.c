@@ -102,5 +102,16 @@ int main()
     head = InsertAfterNode(head, 15, second);
     printf("Linked List after insertion after the given node: \n");
     LinkedListTraversal(head);
+
+    //Free the space allocated due to dynamic allocation
+
+    struct Node *ptr;
+    while(head->next!=NULL)
+    {
+        ptr = head;
+        head = head-> next;
+        free(ptr);
+    }
+    free(head);
     return 0;
 }
