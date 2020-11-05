@@ -50,6 +50,17 @@ struct Node * InsertAtEnd(struct Node *head, int data)
     return head;
 }
 
+struct Node * InsertAfterNode(struct Node *head, int data, struct Node *prevNode)
+{
+    struct Node *ptr = (struct Node*)malloc (sizeof(struct Node));
+    
+    ptr->data = data;
+    ptr->next = prevNode->next;
+    prevNode->next = ptr;
+    return head;
+}
+
+
 int main()
 {
     struct Node * head;
@@ -86,6 +97,10 @@ int main()
 
     head = InsertAtEnd(head, 10);
     printf("Linked List after insertion at the end: \n");
+    LinkedListTraversal(head);
+
+    head = InsertAfterNode(head, 15, second);
+    printf("Linked List after insertion after the given node: \n");
     LinkedListTraversal(head);
     return 0;
 }
