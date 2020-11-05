@@ -135,5 +135,16 @@ int main()
     head = DeleteByValue(head, 13);
     printf("Linked List After Deletion By Value: \n");
     LinkedListTraversal(head);
+
+    //Free the space allocated due to dynamic allocation
+
+    struct Node *ptr;
+    while(head->next!=NULL)
+    {
+        ptr = head;
+        head = head-> next;
+        free(ptr);
+    }
+    free(head);
     return 0;
 }
