@@ -36,6 +36,20 @@ struct Node * InsertInBetween(struct Node *head, int data, int index)
     p->next = ptr;
     return head;
 }
+
+struct Node * InsertAtEnd(struct Node *head, int data)
+{
+    struct Node *ptr = (struct Node*)malloc (sizeof(struct Node));
+    struct Node *p = head;
+    while(p->next!=NULL)
+    p=p->next;
+
+    ptr->data = data;
+    p->next = ptr;
+    ptr->next = NULL;
+    return head;
+}
+
 int main()
 {
     struct Node * head;
@@ -68,6 +82,10 @@ int main()
 
     head = InsertInBetween(head, 25, 1);
     printf("Linked List after insertion in between: \n");
+    LinkedListTraversal(head);
+
+    head = InsertAtEnd(head, 10);
+    printf("Linked List after insertion at the end: \n");
     LinkedListTraversal(head);
     return 0;
 }
