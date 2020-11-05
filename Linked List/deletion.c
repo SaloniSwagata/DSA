@@ -12,6 +12,16 @@ void LinkedListTraversal(struct Node *ptr)
         ptr = ptr->next;
     }
 }
+
+struct Node* DeleteFirstNode(struct Node* head)
+{
+    struct Node *ptr=head;
+
+    head = head->next;
+    free(ptr);
+    return head;
+}
+
 int main()
 {
     struct Node * head;
@@ -35,6 +45,12 @@ int main()
     third->data = 13;
     third->next = NULL;
 
+    printf("Original Linked List: \n");
     LinkedListTraversal(head);
+
+    head = DeleteFirstNode(head);
+    printf("Linked List After Deletion from front: \n");
+    LinkedListTraversal(head);
+    
     return 0;
 }
