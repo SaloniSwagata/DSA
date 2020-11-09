@@ -13,6 +13,21 @@ void CircularLinkedListTraversal(struct Node *head)
         ptr = ptr->next;
     }while(ptr!=head);
 }
+struct Node* insertatfirst(struct Node *head, int data)
+{
+    struct Node *ptr = (struct Node*)malloc (sizeof(struct Node));
+    ptr->data = data;
+
+    struct Node *p = head;
+    while(p->next!=head)
+    p = p->next;
+
+    p->next = ptr;
+    ptr->next = head;
+
+    head = ptr;
+    return head;
+}
 int main()
 {
     struct Node * head;
@@ -36,6 +51,13 @@ int main()
     third->data = 13;
     third->next = head;
 
+    printf("Original Circular Linked List: \n");
     CircularLinkedListTraversal(head);
+
+    head = insertatfirst(head, 23);
+
+    printf("Circular Linked List After Insertion at front: \n");
+    CircularLinkedListTraversal(head);
+
     return 0;
 }
