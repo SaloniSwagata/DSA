@@ -13,6 +13,26 @@ void DoublyLinkedListTraversal(struct Node *ptr)
         ptr = ptr->next;
     }
 }
+struct Node * DoublyReverse(struct Node*head)
+{
+    struct Node *temp = NULL;   
+     struct Node *current = head; 
+       
+     /* swap next and prev for all nodes of  
+       doubly linked list */
+     while (current !=  NULL) 
+     { 
+       temp = current->prev; 
+       current->prev = current->next; 
+       current->next = temp;               
+       current = current->prev; 
+     }       
+       
+     /* Before changing head, check for the cases like empty  
+        list and list with only one node */
+     if(temp != NULL ) 
+        head = temp->prev; 
+}
 int main()
 {
     struct Node * head;
@@ -39,6 +59,10 @@ int main()
     third->next = NULL;
     third->prev = second;
 
+    printf("Original Doubly Linked List: \n");
+    DoublyLinkedListTraversal(head);
+    head = DoublyReverse(head);
+    printf("Reversed Doubly Linked List: \n");
     DoublyLinkedListTraversal(head);
     return 0;
 }
