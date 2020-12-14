@@ -21,3 +21,11 @@ This repository contains all the codes related to Data Structures and Algorithms
 - Insertion at - Front, End, Specific Index, After a Specific Node
 - Deletion from - Front, End, Specific Index, Value of Node
 - Circular Linked List - Traversal & Insertion at front
+
+#### Sorting Techniques:
+- Selection Sort
+- Bubble Sort
+- Insertion Sort
+
+#### Number Questions:
+- Adding two binary numbers
