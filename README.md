@@ -15,6 +15,13 @@ This repository contains all the codes related to Data Structures and Algorithms
 - Insertion
 - Deletion
 - Linear Search & Binary Search
+- Important Questions
+    - First Repeating Element
+    - Maximum Sum SubArray Array (Kadane's Algorithm)
+    - Maximum Sum Circular Subarray
+    - Pair Target Sum Problem
+    - Smallest Positive Missing Number
+    - SubArray with Given Sum
 
 #### Linked Lists:
 - Creation & Traversal
