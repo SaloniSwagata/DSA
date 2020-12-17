@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "as_adt.C": "cpp"
+        "as_adt.C": "cpp",
+        "ostream": "cpp"
     }
 }
