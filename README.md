@@ -7,9 +7,6 @@ This repository contains all the codes related to Data Structures and Algorithms
 
 ## Topics covered till now - 
 
-#### Function related questions:
-- Addition of two binary numbers 
-
 #### Arrays:
 - Implementation as an Abstract Data Type
 - Insertion
@@ -22,6 +19,10 @@ This repository contains all the codes related to Data Structures and Algorithms
     - Pair Target Sum Problem
     - Smallest Positive Missing Number
     - SubArray with Given Sum
+
+- 2D Arrays
+    - Printing a matrix in spiral form
+    - Convert a matrix to it's transpose
 
 #### Linked Lists:
 - Creation & Traversal
