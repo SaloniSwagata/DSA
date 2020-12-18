@@ -1,1 +1,0 @@
-{"name":"Local: smallest_positive","url":"e:\\DSA\\Arrays\\Array Challenges\\smallest_positive.cpp","tests":[{"id":1608230786120,"input":"5\n0 -10 1 3 -20","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\DSA\\Arrays\\Array Challenges\\smallest_positive.cpp","group":"local","local":true}
