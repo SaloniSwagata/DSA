@@ -32,11 +32,17 @@ int main()
         column_end--;
 
         //For Row End
+        if (row_start>row_end)
+        break;
+
         for(int col=column_end;col>=column_start;col--)
         cout << arr[row_end][col] << " ";
         row_end--;
 
         //For Column Start
+        if (column_start>column_end)
+        break;
+
         for(int row=row_end;row>=row_start;row--)
         cout << arr[row][column_start] << " ";
         column_start++;
