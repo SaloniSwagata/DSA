@@ -37,3 +37,7 @@ This repository contains all the codes related to Data Structures and Algorithms
 
 #### Number Questions:
 - Adding two binary numbers
+
+#### Bit Manipulation
+- Finding the number of set bits in a positive number
+- Finding the number of bits to be flipped to convert A to B.
