@@ -41,3 +41,5 @@ This repository contains all the codes related to Data Structures and Algorithms
 #### Bit Manipulation
 - Finding the number of set bits in a positive number
 - Finding the number of bits to be flipped to convert A to B.
+- Check if N is a power of 2
+- Find the position of the only set bit in a number
