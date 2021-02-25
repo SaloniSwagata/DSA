@@ -8,8 +8,8 @@ int main()
     cout << "Enter the number ";
     cin >> n;
     if (n && !(n&n-1)==1)
-    cout << "Powe of 2";
+    cout << "Power of 2";
     else
-    cout << "Powe of 2";
+    cout << "Not Power of 2";
     return 0;
 }
