@@ -2,7 +2,7 @@
 
 This repository contains all the codes related to Data Structures and Algorithms.
 
-- All the codes implemented here are written in C & C++ language.
+- All the codes implemented here are written in C, C++ & Python language.
 - The questions have been solved from the excel sheet in the repository
 
 ## Topics covered till now - 
@@ -43,3 +43,11 @@ This repository contains all the codes related to Data Structures and Algorithms
 - Finding the number of bits to be flipped to convert A to B.
 - Check if N is a power of 2
 - Find the position of the only set bit in a number
+
+#### Recursion
+- Factorial of a number
+- Print Numbers from 1 to N
+- Sorting Array in ascending order
+- Tower Of Hanoi Problem
+- Printing Subsets of a given string (PowerSet)
+- Generating all Balanced Paranthesis for a given number of brackets
