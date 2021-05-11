@@ -52,3 +52,6 @@ This repository contains all the codes related to Data Structures and Algorithms
 - Printing Subsets of a given string (PowerSet)
 - Generating all Balanced Paranthesis for a given number of brackets
 - Josephus problem
+
+#### Dynamic Programming
+- 0/1 Knapsack using recursion
