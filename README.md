@@ -55,3 +55,4 @@ This repository contains all the codes related to Data Structures and Algorithms
 
 #### Dynamic Programming
 - 0/1 Knapsack using recursion
+- 0/1 Knapsack using recursion+memoization
