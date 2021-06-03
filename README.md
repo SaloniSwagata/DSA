@@ -23,6 +23,8 @@ This repository contains all the codes related to Data Structures and Algorithms
 - 2D Arrays
     - Printing a matrix in spiral form
     - Convert a matrix to it's transpose
+    - Sort all the elements of the matrix (row and column wise)
+    - Rotate a matrix by 90 degrees in anticlockwise direction
 
 #### Linked Lists:
 - Creation & Traversal
