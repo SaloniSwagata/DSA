@@ -7,6 +7,22 @@ class BinaryTreeNode:
         self.data = data
         self.right = None
 
+# Creating a tree by taking input tree wise (i.e, root - left subtree - right subtree)
+# For None, the user enters -1
+
+def FullTreeInput():
+    rootdata = int(input())
+    if rootdata==-1:
+        return None
+    root = BinaryTreeNode(rootdata)
+    leftChild = FullTreeInput()
+    rightChild = FullTreeInput()
+    root.left = leftChild
+    root.right = rightChild
+
+    return root
+    
+
 # Printing tree simple way
 def printTree(root):
     if root==None:
