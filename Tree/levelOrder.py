@@ -9,6 +9,7 @@ class BinaryTreeNode:
 
 import queue
 
+# Taking Level Order Input
 def levelInput():
     rootData = int(input("Enter the root node data: "))
     if rootData ==-1:
@@ -35,3 +36,19 @@ def levelInput():
     
     return root
 
+# Level Order Output
+def levelInput(root):
+    if root is None:
+        print("Empty tree")
+    else:
+        q = queue.Queue()
+
+        q.put(root)
+
+        while not(q.empty()):
+            current_node = q.get()
+
+            if current_node is not None:
+                print(current_node.data,end=" ")
+            q.put(current_node.left)
+            q.put(current_node.right)
