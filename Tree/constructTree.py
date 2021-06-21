@@ -9,7 +9,7 @@ class BinaryTreeNode:
 
 # Creating Binary Tree using PreOrder and InOrder
 
-def buildTree(preorder, inorder):
+def buildTreePre(preorder, inorder):
     if len(preorder)==0:
         return None
     rootdata = preorder[0]
@@ -21,8 +21,30 @@ def buildTree(preorder, inorder):
     leftsublen = len(leftinord)
     leftpre = preorder[1:leftsublen+1]
     rightpre = preorder[leftsublen+1:]
-    leftchild = buildTree(leftpre,leftinord)
-    rightchild = buildTree(rightpre,rightinord)
+    leftchild = buildTreePre(leftpre,leftinord)
+    rightchild = buildTreePre(rightpre,rightinord)
+        
+    root.left = leftchild
+    root.right = rightchild
+        
+    return root
+
+# Creating Binary Tree using PostOrder and InOrder
+
+def buildTree(postorder, inorder):
+    if len(postorder)==0:
+        return None
+    rootdata = postorder[-1]
+    root = BinaryTreeNode(rootdata)
+    rootindex = inorder.index(rootdata)
+    leftinord = inorder[0:rootindex]
+    rightinord = inorder[rootindex+1:]
+        
+    leftsublen = len(leftinord)
+    leftpost = postorder[0:leftsublen]
+    rightpost = postorder[leftsublen:len(postorder)-1]
+    leftchild = buildTree(leftpost,leftinord)
+    rightchild = buildTree(rightpost,rightinord)
         
     root.left = leftchild
     root.right = rightchild
