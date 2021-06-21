@@ -29,3 +29,23 @@ def BalanceTree(root):
         return True
     else:
         return False
+
+
+# Check if tree is balanced or not using single function
+
+def isBalanced(root):
+    if root is None:
+        return 0,True
+    
+    lh, leftisB = isBalanced(root.left)
+    rh, rightisB = isBalanced(root.right)
+
+    h = max(lh,rh)+1
+
+    if abs(lh-rh)>1:
+        return h,False
+    
+    if leftisB and rightisB:
+        return h,True
+    else:
+        return h,False
